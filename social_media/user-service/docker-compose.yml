@@ -1,0 +1,41 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "5001:3306"
+    restart: always
+    environment:
+      MYSQL_PORT: 5001
+      MYSQL_DATABASE: social_media
+      MYSQL_USER: linus
+      MYSQL_USER_PASSWORD: pass123
+      MYSQL_ROOT_PASSWORD: pass123
+    networks:
+      - backend
+
+  user-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: user-server
+    ports:
+      - "8083:8083"
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:5001/social_media?createDatabaseIfNotExists=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: pass123
+      spring.jpa.hibernate.globally_quoted_identifiers: 1
+      spring.jpa.hibernate.ddl-auto: update
+      spring.jpa.database-platform: org.hibernate.dialect.MySQL8Dialect
+      SPRING.JPA.SHOW-SQL: "TRUE"
+    networks:
+      - backend
+    depends_on:
+      - mysql
+
+networks:
+  backend:
