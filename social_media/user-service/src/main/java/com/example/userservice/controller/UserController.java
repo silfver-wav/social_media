@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/user")//, consumes = {MediaType.APPLICATION_JSON_VALUE})
 public class UserController {
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
+    //@Autowired
+    //private DiscoveryClient discoveryClient;
     private final IUserService userService;
     private final IFollowingService followingService;
 

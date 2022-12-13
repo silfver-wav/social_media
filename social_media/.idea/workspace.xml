@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc84f3d6-6039-4ec9-89fc-a2364c9e6165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front-end/src/components/chat/Chat.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front-end/src/components/chat/Chat.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front-end/src/components/dashBoard/AllMyFriends.js" afterDir="false" />
@@ -20,11 +21,54 @@
       <change afterPath="$PROJECT_DIR$/front-end/src/components/users/User.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front-end/src/components/users/User.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front-end/src/components/users/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/test/java/com/example/socialmediaserver/SocialMediaWebApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/test/java/com/example/socialmediaserver/service/FollowingServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/test/java/com/example/socialmediaserver/service/MessageServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/test/java/com/example/socialmediaserver/service/PersonalLogServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/test/java/com/example/socialmediaserver/service/UserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/service/PersonalLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/service/PersonalLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log-service/src/test/java/com/socialmedia/logservice/LogServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/example/userservice/service/FollowingServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/example/userservice/service/MessageServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/example/userservice/service/PersonalLogServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/example/userservice/service/UserServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +83,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/front-end" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -62,39 +107,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/linus/Downloads/SocialMedia_WebApp-Personal_Log/social_media/chat-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "02898daa8b57a9a42a9729251a63b6e0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/linus/Documents/GitHub/social_media/social_media/user-service/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;005ab29a5a40813d52db6f0f6e031ff6&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\linus\Documents\GitHub\social_media\social_media\user-service\src\main\resources" />
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\chat-service" />
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\log-service" />
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\user-service" />
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\log-service\src\main\java\com\socialmedia\logservice" />
-      <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\front-end" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.socialmediaserver.config" />
+      <recent name="com.example.userservice.config" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean verify" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -103,32 +157,51 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceRegistrationAndDiscoveryServiceApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <option name="ACTIVE_PROFILES" />
       <module name="chat-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.socialmediaserver.ChatServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="LogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <option name="ACTIVE_PROFILES" />
       <module name="log-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.socialmedia.logservice.LogServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceRegistrationAndDiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="eureka-server" />
+    <configuration name="ServiceRegistrationAndDiscoveryServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-registration-and-discovery-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.serviceregistrationanddiscoveryservice.ServiceRegistrationAndDiscoveryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ServiceRegistrationAndDiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="service-registration-and-discovery-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.serviceregistrationanddiscoveryservice.ServiceRegistrationAndDiscoveryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <option name="ACTIVE_PROFILES" />
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.userservice.UserServiceApplication" />
       <method v="2">
@@ -138,6 +211,19 @@
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.log-mysql: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="log-mysql" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -156,10 +242,15 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="user-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.user-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="user-service/docker-compose.yml" />
+          <option name="services">
+            <list>
+              <option value="user-server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -172,25 +263,26 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="user-service.mysql: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="mysql" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="user-service/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.log-mysql: Compose Deployment" />
+      <item itemvalue="Docker.user-service/Dockerfile" />
+      <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.user-server: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ChatServiceApplication" />
+      <item itemvalue="Spring Boot.LogServiceApplication" />
+      <item itemvalue="Spring Boot.ServiceRegistrationAndDiscoveryServiceApplication" />
+      <item itemvalue="Spring Boot.ServiceRegistrationAndDiscoveryServiceApplication (1)" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.user-service: Compose Deployment" />
-        <item itemvalue="Docker.user-service.mysql: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.log-mysql: Compose Deployment" />
         <item itemvalue="Docker.user-service/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml.user-server: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -209,6 +301,11 @@
       <workItem from="1670577092401" duration="8562000" />
       <workItem from="1670601668456" duration="12913000" />
       <workItem from="1670794280587" duration="5436000" />
+      <workItem from="1670840640139" duration="3262000" />
+      <workItem from="1670861582159" duration="13123000" />
+      <workItem from="1670927177555" duration="11684000" />
+      <workItem from="1670950494376" duration="7081000" />
+      <workItem from="1670974443713" duration="1045000" />
     </task>
     <servers />
   </component>

@@ -7,17 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="log-service" />
+        <module name="api-gateway" />
         <module name="chat-service" />
         <module name="user-service" />
         <module name="eureka-server" />
+        <module name="service-registration-and-discovery-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="chat-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="log-service" options="-parameters" />
+      <module name="service-registration-and-discovery-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
