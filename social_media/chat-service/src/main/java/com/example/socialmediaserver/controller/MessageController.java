@@ -2,8 +2,6 @@ package com.example.socialmediaserver.controller;
 
 import com.example.socialmediaserver.interfaces.IMessageService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/message", consumes = {MediaType.APPLICATION_JSON_VALUE})
 public class MessageController {
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
     private final IMessageService messageService;
 
     /**

@@ -5,8 +5,6 @@ import com.example.userservice.interfaces.IUserService;
 import com.example.userservice.model.Following;
 import com.example.userservice.model.User;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +18,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/user")//, consumes = {MediaType.APPLICATION_JSON_VALUE})
 public class UserController {
 
-    //@Autowired
-    //private DiscoveryClient discoveryClient;
     private final IUserService userService;
     private final IFollowingService followingService;
 

@@ -7,13 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="log-service" />
-        <module name="api-gateway" />
+        <module name="vertx-service" />
         <module name="chat-service" />
         <module name="user-service" />
         <module name="eureka-server" />
-        <module name="service-registration-and-discovery-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="17" />
+      <module name="service-registration-and-discovery-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -23,6 +26,7 @@
       <module name="log-service" options="-parameters" />
       <module name="service-registration-and-discovery-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
+      <module name="vertx-service" options="" />
     </option>
   </component>
 </project>

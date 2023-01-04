@@ -10,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.socialmedia.logservice.repository.PersonalLogRepository;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.reactive.function.client.WebClient;
-
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -23,7 +21,6 @@ import java.util.*;
 public class PersonalLogService implements IPersonalLogService {
     private final PersonalLogRepository personalLogRepository;
     private RestTemplate restTemplate;
-    private final WebClient.Builder webClientBuilder;
 
     //private final FollowingRepository followingRepository;
 
@@ -81,8 +78,8 @@ public class PersonalLogService implements IPersonalLogService {
 
 
         HashMap<String, Long> params = new HashMap<>();
-        ResponseEntity<Following> rs = restTemplate.getForEntity("http://user-service/user/getFollowing/"+username, Following.class, params);
-        //Following rs = webClientBuilder.build().get().uri("http://user-service/user/getFollowing/"+username).retrieve().bodyToMono(Following.class).block();
+        ResponseEntity<Following> rs = restTemplate.getForEntity("http://localhost:8083/user/getFollowing/"+username, Following.class, params);
+
         if (!rs.hasBody()) return ResponseHandler.generateResponse(HttpStatus.OK, "User is not following anyone",new Object());
 
 

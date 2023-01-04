@@ -3,8 +3,6 @@ package com.socialmedia.logservice.controller;
 import com.socialmedia.logservice.interfaces.IPersonalLogService;
 import com.socialmedia.logservice.model.PersonalLog;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +14,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping(path = "/personal_log", consumes = {MediaType.APPLICATION_JSON_VALUE})
 public class PersonalLogController {
-
-    @Autowired
-    private DiscoveryClient discoveryClient;
     private final IPersonalLogService personalLogService;
 
     /**
