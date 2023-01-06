@@ -9,6 +9,9 @@ io.on('connection', (socket) => {
     socket.on('canvas-data', (data) => {
         socket.broadcast.emit('canvas-data', data);
     })
+    socket.on('save-image', (dataURL) => {
+        console.log(dataURL);
+    })
 })
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 5001;

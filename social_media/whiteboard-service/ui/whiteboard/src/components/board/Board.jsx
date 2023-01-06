@@ -8,6 +8,8 @@ class Board extends React.Component {
     timeout;
     socket = io.connect("http://localhost:3000");
 
+    ctx;
+
     constructor(props) {
         super(props);
 
@@ -29,9 +31,15 @@ class Board extends React.Component {
         this.drawOnCanvas();
     }
 
+    componentWillReceiveProps(newProps) {
+        this.ctx.strokeStyle = newProps.color;
+        this.ctx.lineWidth = newProps.size;
+    }
+
     drawOnCanvas() {
         var canvas = document.querySelector('#board');
-        var ctx = canvas.getContext('2d');
+        this.ctx = canvas.getContext('2d');
+        var ctx = this.ctx;
     
         var sketch = document.querySelector('#sketch');
         var sketch_style = getComputedStyle(sketch);
@@ -52,10 +60,10 @@ class Board extends React.Component {
     
     
         /* Drawing on Paint App */
-        ctx.lineWidth = 5;
+        ctx.lineWidth = this.props.size;
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
-        ctx.strokeStyle = 'blue';
+        ctx.strokeStyle = this.props.color;
     
         canvas.addEventListener('mousedown', function(e) {
             canvas.addEventListener('mousemove', onPaint, false);
@@ -73,28 +81,48 @@ class Board extends React.Component {
             ctx.closePath();
             ctx.stroke();
             
-
+            
+            //Set timeout to only send data to other users after no brush-stroke has been made within 1 second (1000ms)
             if(root.timeout !== undefined) clearTimeout(root.timeout);
             root.timeout = setTimeout(function() {
                 console.log("Data have not been sent");
                 var base64ImageData = canvas.toDataURL("image/png");
-                console.log(base64ImageData);
+                //console.log(base64ImageData);
                 root.socket.emit("canvas-data", base64ImageData);
                 console.log("Data have been sent");
             }, 1000)
         };
-        
-    
     }
+
+    handleSaveClick = () => {
+
+        var root = this;
+        var canvas = document.getElementById('board');
+
+        // get the data URL of the canvas image
+        var dataURL = canvas.toDataURL("image/png");
+
+        // send the dataURL to the server
+        root.socket.emit('save-image', dataURL);
+    }
+
+
+    handleLoadClick = () => {
+    // code to handle load button click goes here
+    };
+
 
     render() {
         return (
-            <div className="sketch" id="sketch">
-                <canvas className="board" id="board"> </canvas>
+          <div className="sketch" id="sketch">
+            <canvas className="board" id="board"> </canvas>
+            <div className="button-container" id="buttons">
+              <button type="button" onClick={this.handleSaveClick}> Save </button>
+              <button type="button" onClick={this.handleLoadClick}> Load </button>
             </div>
-            
+          </div>
         )
-    }
+      }
 }
 
 export default Board
