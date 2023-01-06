@@ -12,6 +12,9 @@ class Board extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            imageList: []
+        };
 
         this.socket.on("canvas-data", function(data) {
             var root = this;
@@ -29,6 +32,11 @@ class Board extends React.Component {
 
     componentDidMount() {
         this.drawOnCanvas();
+
+        this.socket.on('image-list', imageList => {
+            // update the state with the list of available images
+            this.setState({ imageList });
+          });
     }
 
     componentWillReceiveProps(newProps) {
@@ -108,8 +116,35 @@ class Board extends React.Component {
 
 
     handleLoadClick = () => {
-    // code to handle load button click goes here
-    };
+        var root = this;
+        
+      
+        // request the list of available images from the server
+        root.socket.emit('request-image-list');
+        console.log("Requested image list");
+      
+        // listen for the image list response from the server
+        root.socket.on('image-list', function(imageList) {
+            // display the list of available images to the user
+            // (e.g. using a select dropdown or list of clickable items)
+            let counter = 0;
+            imageList.forEach((imageName) => {
+              console.log("#" + counter++ + " : " + imageName);
+            
+            });
+          });
+
+        // listen for the selected image from the user
+        root.socket.on('select-image', function(selectedImage) {
+          // request the selected image from the server
+          root.socket.emit('request-image', selectedImage);
+        });
+      
+        // listen for the image data from the server
+        root.socket.on('image-data', function(imageData) {
+          // decode the image data and draw it on the canvas
+        });
+      };
 
 
     render() {
@@ -119,6 +154,11 @@ class Board extends React.Component {
             <div className="button-container" id="buttons">
               <button type="button" onClick={this.handleSaveClick}> Save </button>
               <button type="button" onClick={this.handleLoadClick}> Load </button>
+              <select onChange={this.handleSelectChange}>
+                {this.state.imageList.map((imageName, index) => (
+                    <option key={index} value={imageName}>{imageName}</option>
+                ))}
+                </select>
             </div>
           </div>
         )

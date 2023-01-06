@@ -45,8 +45,6 @@ class Container extends React.Component {
                     <Board 
                         color={this.state.color} 
                         size={this.state.size}
-                        handleSave={this.props.handleSave}
-                        handleLoad={this.props.handleLoad}
                     ></Board>
                 </div>
             </div>
