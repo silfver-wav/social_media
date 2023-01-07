@@ -40,10 +40,20 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
   .clear-canvas-button {
-    background-color: #fbbc05; /* change the color to red */
-    color: white; /* change the text color to white */
-    border: none; /* remove the border */
-    padding: 10px 20px; /* add some padding to the button */
-    font-size: 16px; /* change the font size */
-    cursor: pointer; /* change the cursor to a pointer on hover */
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 8px; 
+    color: #fff;
+    background-color: #fbbc05; 
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
   }
+  .clear-canvas-button:hover{
+    background-color: #fbbc05;;
+    border-color: white;
+  }
+
+  

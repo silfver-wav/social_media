@@ -99,10 +99,11 @@ class Board extends React.Component {
     }
 
     clearCanvas = () => {
-        console.log("Here123")
         const canvas = document.getElementById('board');
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        this.socket.emit("clear-canvas");
       }
 
     handleSaveClick = () => {

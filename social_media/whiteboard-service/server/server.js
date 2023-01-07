@@ -12,6 +12,11 @@ io.on('connection', (socket) => {
 
     socket.emit('canvas-data', canvasData);
 
+    socket.on("clear-canvas", () => {
+        // clear the server's canvas state
+        canvasData = [];
+      });
+
     socket.on('canvas-data', (data) => {
         console.log(data);
         canvasData = data;
