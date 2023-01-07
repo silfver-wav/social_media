@@ -18,7 +18,6 @@ io.on('connection', (socket) => {
       });
 
     socket.on('canvas-data', (data) => {
-        console.log(data);
         canvasData = data;
         socket.broadcast.emit('canvas-data', data);
     })
@@ -53,11 +52,9 @@ io.on('connection', (socket) => {
       socket.on('request-image', async (selectedImage) => {
         try {
           // read the selected image from the filesystem
-          console.log(selectedImage);
           const imageData = await readImage(selectedImage);
           const base64ImageData = imageData.toString('base64');
-          console.log("This is the base65imageData pulled from the server");
-          console.log(base64ImageData);
+          
           // send the image data back to the client
           socket.emit('image-data', base64ImageData);
         } catch (error) {
