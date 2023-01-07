@@ -1,6 +1,6 @@
 {
   "name": "whiteboard",
-  "proxy": "http://server:5001",
+  "proxy": "http://server:5002",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
