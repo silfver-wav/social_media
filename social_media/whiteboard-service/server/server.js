@@ -2,6 +2,7 @@ var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var fs = require('fs');
+const { SocketAddress } = require('net');
 
 let counter = 0;
 
@@ -39,9 +40,33 @@ io.on('connection', (socket) => {
         console.log("This is the imageList sent back to the client");
         console.log(imageList);
         socket.emit('image-list', imageList);
-      });
+      })
+      socket.on('request-image', async (selectedImage) => {
+        try {
+          // read the selected image from the filesystem
+          console.log(selectedImage);
+          const imageData = await readImage(selectedImage);
+          const base64ImageData = imageData.toString('base64');
+          // send the image data back to the client
+          socket.emit('image-data', base64ImageData);
+        } catch (error) {
+          console.error(error);
+        }
+      });  
 })
 
+  
+async function readImage(imageName) {
+    return new Promise((resolve, reject) => {
+      fs.readFile(`./saved_images/${imageName}`, (error, data) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data);
+        }
+      });
+    });
+  }
 
 async function getImageList() {
     try {
