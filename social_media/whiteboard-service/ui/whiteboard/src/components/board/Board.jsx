@@ -92,10 +92,18 @@ class Board extends React.Component {
                 var base64ImageData = canvas.toDataURL("image/png");
                 //console.log(base64ImageData);
                 root.socket.emit("canvas-data", base64ImageData);
+                console.log(base64ImageData);
                 console.log("Data have been sent");
             }, 1000)
         };
     }
+
+    clearCanvas = () => {
+        console.log("Here123")
+        const canvas = document.getElementById('board');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
 
     handleSaveClick = () => {
 
@@ -123,20 +131,22 @@ class Board extends React.Component {
       
         // listen for the image data from the server
         root.socket.on('image-data', function(imageData) {
-            // decode the image data
-            const decodedImageData = atob(imageData);
-            //console.log(decodedImageData);
+
             // create an HTMLImageElement object
             const img = new Image();
+            // set the src of the image to the image data
+            img.src = "data:image/png;base64," + imageData;
+
             // when the image has finished loading, draw it on the canvas
             const canvas = document.getElementById('board');
             const ctx = canvas.getContext('2d');
             img.onload = function() {
-              ctx.drawImage(img, 0, 0);
-              console.log("The image was loaded succesfully!");
+                //clear the canvas before drawing the loaded image
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0);
+                console.log("The image was loaded succesfully!");
             }
-            
-          });
+        });
       };
 
       handleRefreshClick = () => {
@@ -155,6 +165,7 @@ class Board extends React.Component {
     render() {
         return (
           <div className="sketch" id="sketch">
+              
             <canvas className="board" id="board"> </canvas>
             <div className="button-container" id="buttons">
               <button type="button" onClick={this.handleSaveClick}> Save </button>
@@ -165,6 +176,7 @@ class Board extends React.Component {
                 ))}
                 </select>
                 <button type="button" onClick={this.handleRefreshClick}> Refresh </button>
+                <button type="button" className="clear-canvas-button" onClick={this.clearCanvas}>Clear Canvas</button>
             </div>
           </div>
         )

@@ -2,15 +2,19 @@ var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var fs = require('fs');
-const { SocketAddress } = require('net');
 
 let counter = 0;
+let canvasData;
 
 
 io.on('connection', (socket) => {
     console.log('User Online');
 
+    socket.emit('canvas-data', canvasData);
+
     socket.on('canvas-data', (data) => {
+        console.log(data);
+        canvasData = data;
         socket.broadcast.emit('canvas-data', data);
     })
     socket.on('save-image', (dataURL) => {
@@ -47,6 +51,8 @@ io.on('connection', (socket) => {
           console.log(selectedImage);
           const imageData = await readImage(selectedImage);
           const base64ImageData = imageData.toString('base64');
+          console.log("This is the base65imageData pulled from the server");
+          console.log(base64ImageData);
           // send the image data back to the client
           socket.emit('image-data', base64ImageData);
         } catch (error) {
