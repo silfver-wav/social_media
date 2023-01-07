@@ -17,6 +17,16 @@ public class PersonalLog implements Comparable<PersonalLog> {
     @GeneratedValue
     @Column(columnDefinition = "BINARY(16)", unique = true, nullable = false)
     private UUID id;
+
+    @Column(nullable = false)
+    private String type;
+
+    @Column
+    private String chartType;
+    @Column(columnDefinition = "int default 0")
+    private int amount;
+    @Column(columnDefinition = "int default 0")
+    private int totalAmount;
     @Column
     private String msg;
     @Column
@@ -26,12 +36,17 @@ public class PersonalLog implements Comparable<PersonalLog> {
     private LocalDateTime date;
 
     @JsonCreator
-    public PersonalLog(UUID id, String msg, String userName, LocalDateTime date) {
+    public PersonalLog(UUID id, String type, String chartType, int amount, int totalAmount, String msg, String userName, LocalDateTime date) {
         this.id = id;
+        this.type = type;
+        this.chartType = chartType;
+        this.amount = amount;
+        this.totalAmount = totalAmount;
         this.msg = msg;
         this.userName = userName;
         this.date = date;
     }
+
 
     public PersonalLog() {}
 
@@ -61,6 +76,38 @@ public class PersonalLog implements Comparable<PersonalLog> {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getChartType() {
+        return chartType;
+    }
+
+    public void setChartType(String chartType) {
+        this.chartType = chartType;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(int totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     @JsonIgnore

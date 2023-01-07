@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(path = "/personal_log", consumes = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/personal_log")
 public class PersonalLogController {
     private final IPersonalLogService personalLogService;
 
@@ -34,7 +34,7 @@ public class PersonalLogController {
      * @return HTTP status OK if found, otherwise HTTP status BAD_REQUEST or NOT_FOUND.
      */
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping(value = "dash/{username}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "dash/{username}")
     public ResponseEntity<Object> getDash(@PathVariable("username") String username) {
         System.out.println("Dash");
         System.out.println("username: "+username);

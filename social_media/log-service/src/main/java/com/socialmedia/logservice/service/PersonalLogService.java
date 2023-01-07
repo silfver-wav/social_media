@@ -32,7 +32,7 @@ public class PersonalLogService implements IPersonalLogService {
     @Override
     public ResponseEntity<Object> create(PersonalLog personal_log) {
         try {
-            if (personal_log.getMsg() == null)
+            if (personal_log.getType() == null)
                 return ResponseHandler.generateResponse(HttpStatus.BAD_REQUEST, "All fields required");
 
             personal_log.setDate(LocalDateTime.now());
@@ -62,7 +62,7 @@ public class PersonalLogService implements IPersonalLogService {
             personalLogs.add(iterator.next());
 
         if (personalLogs.size() == 0)
-            return ResponseHandler.generateResponse(HttpStatus.OK, "No personal logs found","nothing");
+            return ResponseHandler.generateResponse(HttpStatus.OK, "No personal logs found");
 
         return ResponseHandler.generateResponse(HttpStatus.OK, "Ok", personalLogs);
     }
@@ -100,4 +100,5 @@ public class PersonalLogService implements IPersonalLogService {
         return ResponseHandler.generateResponse(HttpStatus.OK, "logs found",logs);
 
     }
+
 }
