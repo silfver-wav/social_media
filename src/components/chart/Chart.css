@@ -1,0 +1,54 @@
+/* Add a dark blue background color to the body */
+body {
+    background-color: #222;
+}
+
+/* Add some padding and a white text color to the body */
+body {
+    padding: 20px;
+    color: #fff;
+}
+
+/* Add a border and some padding to the header */
+header {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+/* Add a blue background color and some padding to the input button when the mouse hovers over it */
+input[type="submit"]:hover {
+    background-color: blue;
+    padding: 10px;
+}
+
+/* Add a red border to the input button when it is focused */
+input[type="submit"]:focus {
+    border-color: red;
+}
+
+/* Add a green text color to the links */
+a {
+    color: green;
+}
+
+.parent-element {
+    display: grid; /* Enable flexbox layout */
+    align-items: center; /* Center the element vertically */
+    justify-content: center; /* Center the element horizontally */
+    margin-top: 100px;  /* Add some space above the element */
+}
+
+.pie-chart {
+    width: 50%; /* Set a width for the element */
+    margin: auto; /* Center the element horizontally */
+}
+
+.bar-chart {
+    width: 50%; /* Set a width for the element */
+    margin: auto; /* Center the element horizontally */
+}
+
+.submit-button {
+    width: 20%; /* Set a width for the element */
+    margin-left: 1040px; /* Move the element to the right */
+}
