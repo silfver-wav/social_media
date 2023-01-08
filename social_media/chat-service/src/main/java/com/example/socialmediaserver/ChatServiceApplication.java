@@ -1,11 +1,19 @@
   package com.example.socialmediaserver;
 
+import com.example.socialmediaserver.model.Message;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+import java.io.File;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+  @SpringBootApplication
 @RestController
 public class ChatServiceApplication {
 
@@ -17,4 +25,13 @@ public class ChatServiceApplication {
 	public String hello() {
 		return "Hello World";
 	}
+
+	/*
+	@Bean
+	CommandLineRunner commandLineRunner(KafkaTemplate<String, Object> kafkaTemplate) {
+		return args -> {
+			kafkaTemplate.send("chat", new Message(UUID.randomUUID(), "Hello World!", null, "user1", "user2", LocalDateTime.now()));
+		};
+	}
+	 */
 }

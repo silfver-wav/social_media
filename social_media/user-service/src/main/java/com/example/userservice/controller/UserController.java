@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.kafka.core.KafkaTemplate;
 
 /**
  * Rest API for user.
@@ -15,11 +16,12 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(path = "/user")//, consumes = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/user")
 public class UserController {
 
     private final IUserService userService;
     private final IFollowingService followingService;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     /**
      * Post endpoint to create a new user.
@@ -28,7 +30,11 @@ public class UserController {
      */
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, path = "/add")
     public ResponseEntity<Object> add(@RequestBody User user) {
-        return userService.createUser(user);
+        ResponseEntity<Object> response = userService.createUser(user);
+        if (response.getStatusCode().is2xxSuccessful()) {
+            kafkaTemplate.send("new-user", user.getUserName());
+        }
+        return response;
     }
 
     /**
