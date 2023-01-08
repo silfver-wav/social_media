@@ -29,6 +29,8 @@ class Board extends React.Component {
             image.src = data;
         })
     }
+    
+    
 
     componentDidMount() {
         this.drawOnCanvas();
@@ -136,7 +138,7 @@ class Board extends React.Component {
             // create an HTMLImageElement object
             const img = new Image();
             // set the src of the image to the image data
-            img.src = "data:image/png;base64," + imageData;
+            img.src = imageData;
 
             // when the image has finished loading, draw it on the canvas
             const canvas = document.getElementById('board');

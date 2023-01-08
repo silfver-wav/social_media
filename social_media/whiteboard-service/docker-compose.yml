@@ -4,14 +4,15 @@ services:
       image: mysql:latest
       environment:
         MYSQL_DATABASE: imageDB
-        MYSQL_USER_PASSWORD: Pass@123
-        MYSQL_ROOT_PASSWORD: Pass@123
+        MYSQL_PASSWORD: pass123
+        MYSQL_ROOT_PASSWORD: pass123
       ports:
         - "5001:3306"
   server:
     build:
       context: ./server
       dockerfile: Dockerfile
+    restart: on-failure
     ports:
       - "5002:5002"
     depends_on:

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('imageDB', 'root', 'Pass@123', {
-    host: 'localhost',
+const sequelize = new Sequelize('imageDB', 'root', 'pass123', {
+    host: 'mysql',
     port: 3306,
     dialect: 'mysql'
     });
@@ -13,15 +13,15 @@ const Image = sequelize.define('image', {
     },
     data: {
         type: Sequelize.TEXT,
-        unique: true,
         allowNull: false
     }
 })
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
     console.log('Tables created successfully');
   })
   .catch((error) => {
     console.error('Error creating database:', error);
+    process.exit(1);
   });
 
 module.exports = {

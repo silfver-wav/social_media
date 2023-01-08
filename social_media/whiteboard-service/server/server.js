@@ -17,6 +17,7 @@ io.on('connection', (socket) => {
     socket.on("clear-canvas", () => {
         // clear the server's canvas state
         canvasData = [];
+        socket.broadcast.emit('clear-canvas', canvasData)
       });
 
     socket.on('canvas-data', (data) => {
@@ -66,35 +67,29 @@ io.on('connection', (socket) => {
 
   
 async function readImage(imageName) {
-    return new Promise((resolve, reject) => {
-      fs.readFile(`./saved_images/${imageName}`, (error, data) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(data);
-        }
-      });
-    });
-  }
-
-async function getImageList() {
-    try {
-      const fileNames = await new Promise((resolve, reject) => {
-        fs.readdir('./saved_images/', (error, fileNames) => {
-          if (error) {
-            reject(error);
-          } else {
-            resolve(fileNames);
-          }
-        });
-      });
-      const imageFileNames = fileNames.filter(fileName => fileName.endsWith('.png') || fileName.endsWith('.jpg') || fileName.endsWith('.jpeg'));
-      return imageFileNames;
+  try {
+    const image = await Image.findOne({
+      where: {
+      name: imageName
+      }});
+      return image.data;
     } catch (error) {
       console.error(error);
     }
-  }
+}
 
+async function getImageList() {
+  try {
+    const imageNames = await Image.findAll({
+      attributes: ['name']
+    });
+    return imageNames.map(image => image.name);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+  
 var server_port = process.env.YOUR_PORT || process.env.PORT || 5002;
 http.listen(server_port, () => {
     console.log("Started on : " + server_port);
