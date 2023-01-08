@@ -1,7 +1,6 @@
 var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
-var fs = require('fs');
 
 const setup = require('./setup');
 const Image = setup.Image;
@@ -17,7 +16,7 @@ io.on('connection', (socket) => {
     socket.on("clear-canvas", () => {
         // clear the server's canvas state
         canvasData = [];
-        socket.broadcast.emit('clear-canvas', canvasData)
+        io.emit('clear-canvas', canvasData)
       });
 
     socket.on('canvas-data', (data) => {
@@ -49,7 +48,7 @@ io.on('connection', (socket) => {
         // send the list of images back to the client
         console.log("This is the imageList sent back to the client");
         console.log(imageList);
-        socket.emit('image-list', imageList);
+        io.emit('image-list', imageList);
       })
       socket.on('request-image', async (selectedImage) => {
         try {
@@ -58,7 +57,7 @@ io.on('connection', (socket) => {
           const base64ImageData = imageData.toString('base64');
           
           // send the image data back to the client
-          socket.emit('image-data', base64ImageData);
+          io.emit('image-data', base64ImageData);
         } catch (error) {
           console.error(error);
         }

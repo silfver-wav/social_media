@@ -15,25 +15,13 @@ class Board extends React.Component {
         this.state = {
             imageList: ["Press Refresh"]
         };
-
-        this.socket.on("canvas-data", function(data) {
-            var root = this;
-            var image = new Image();
-            var canvas = document.querySelector('#board');
-            var ctx = canvas.getContext('2d');
-            image.onload = function() {
-                ctx.drawImage(image, 0, 0);
-
-                root.isDrawing = false;
-            };
-            image.src = data;
-        })
     }
     
-    
-
     componentDidMount() {
         this.drawOnCanvas();
+        setInterval(() => {
+            this.listenForUpdates();
+          }, 50);
     }
 
     componentWillReceiveProps(newProps) {
@@ -100,46 +88,13 @@ class Board extends React.Component {
         };
     }
 
-    clearCanvas = () => {
-        const canvas = document.getElementById('board');
-        const ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        this.socket.emit("clear-canvas");
-      }
-
-    handleSaveClick = () => {
-
-        var root = this;
-        var canvas = document.getElementById('board');
-
-        // get the data URL of the canvas image
-        var dataURL = canvas.toDataURL("image/png");
-
-        // send the dataURL to the server
-        root.socket.emit('save-image', dataURL);
-    }
-
-
-    handleLoadClick = () => {
-        var root = this;
-        // get the select element
-        const selectElement = document.querySelector('.image-select');
-        // get the selected option's value
-        const selectedImage = selectElement.value;
-
-        console.log(selectedImage);
-        // request the selected image from the server
-        root.socket.emit('request-image', selectedImage);
-      
+    listenForUpdates() {
         // listen for the image data from the server
-        root.socket.on('image-data', function(imageData) {
-
+        this.socket.on('image-data', function(imageData) {
             // create an HTMLImageElement object
             const img = new Image();
             // set the src of the image to the image data
             img.src = imageData;
-
             // when the image has finished loading, draw it on the canvas
             const canvas = document.getElementById('board');
             const ctx = canvas.getContext('2d');
@@ -150,19 +105,61 @@ class Board extends React.Component {
                 console.log("The image was loaded succesfully!");
             }
         });
-      };
-
-      handleRefreshClick = () => {
-        var root = this;
-        
-        // request the list of available images from the server
-        root.socket.emit('request-image-list');
-        console.log("Requested image list");
-      
         this.socket.on('image-list', imageList => {
             // update the state with the list of available images
             this.setState({ imageList });
-          });
+        });
+        this.socket.on("canvas-data", function(data) {
+            var root = this;
+            var image = new Image();
+            var canvas = document.querySelector('#board');
+            var ctx = canvas.getContext('2d');
+            image.onload = function() {
+                ctx.drawImage(image, 0, 0);
+
+                root.isDrawing = false;
+            };
+            image.src = data;
+        });
+        this.socket.on("clear-canvas", () => {
+            const canvas = document.getElementById('board');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        })      
+    }
+
+
+    clearCanvas = () => {
+        this.socket.emit("clear-canvas");
+      }
+
+    handleSaveClick = () => {
+        var canvas = document.getElementById('board');
+
+        // get the data URL of the canvas image
+        var dataURL = canvas.toDataURL("image/png");
+
+        // send the dataURL to the server
+        this.socket.emit('save-image', dataURL);
+    }
+
+
+    handleLoadClick = () => {
+        // get the select element
+        const selectElement = document.querySelector('.image-select');
+        // get the selected option's value
+        const selectedImage = selectElement.value;
+
+        console.log(selectedImage);
+        // request the selected image from the server
+        this.socket.emit('request-image', selectedImage);
+      };
+
+      handleRefreshClick = () => {
+        // request the list of available images from the server
+        this.socket.emit('request-image-list');
+        console.log("Requested image list");
+    
         };
 
     render() {
