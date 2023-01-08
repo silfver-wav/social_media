@@ -4,56 +4,30 @@ import com.example.socialmediaserver.interfaces.IMessageService;
 import com.example.socialmediaserver.model.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 
-/**
- * Rest API and websocket for message.
- */
-@RestController
+@Controller
 @RequiredArgsConstructor
 public class ChatSocket {
     private final IMessageService messageService;
     @Autowired
-    private SimpMessagingTemplate simpMessagingTemplate;
+    private KafkaTemplate<String, Message> kafkaTemplate;
 
-    /*
-    @MessageMapping("/sendPhoto")
-    @SendTo({"/topic/photo"})
-    public MultipartFile sendPhoto(@Payload MultipartFile file) {
-        //System.out.println("file: "+file.getOriginalFilename());
-        return file;
-    }com.app.chatservice
-     */
-
-    /**
-     * Socket for public chat and post endpoint for message.
-     * @param message Message body
-     * @return message to all subscribed to socket.
-     */
-    @MessageMapping("/sendMessage")
-    @SendTo("/topic/public")
+    @KafkaListener(topics = "sendMessage", groupId = "group_id")
     @RequestMapping(consumes = {"multipart/form-data"})
-    public Message sendMessage(@Payload Message message) {
+    public void sendMessage(Message message) {
         messageService.saveMessage(message);
-        return message;
+        kafkaTemplate.send("/topic/public", message);
     }
 
-    /**
-     * Socket for private chat and post endpoint for message.
-     * @param message Message body
-     * @return message to receiver.
-     */
-    @MessageMapping("/private-message")
-    public Message recMessage(@Payload Message message){
-        simpMessagingTemplate.convertAndSendToUser(message.getReceiver(),"/private",message);
+    @KafkaListener(topics = "private-message", groupId = "group_id")
+    public void recMessage(Message message) {
+        Message msg = message;
+        kafkaTemplate.send(message.getReceiver(),"/private", msg);
         System.out.println(message.toString());
         messageService.saveMessage(message);
-        return message;
     }
-
 }

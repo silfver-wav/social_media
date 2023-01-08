@@ -12,4 +12,5 @@ public interface IPersonalLogService {
     ResponseEntity<Object> getAllByUser(String username);
 
     ResponseEntity<Object> getDash(String username);
+
 }

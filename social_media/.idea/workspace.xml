@@ -4,55 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc84f3d6-6039-4ec9-89fc-a2364c9e6165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front-end/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/chat/Chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/chat/Chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/dashBoard/AllMyFriends.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/dashBoard/Home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/dashBoard/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/login/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/login/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/navbar/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/navbar/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/personalLog/PersonalLog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/personalLog/PersonalLog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/users/User.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/users/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/components/users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bc84f3d6-6039-4ec9-89fc-a2364c9e6165" name="Changes" comment="back-end fixad front-end kvar">
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/config/KafkaListeners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/config/KafkaTopicConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/ChatServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/ChatServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/controller/ChatSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/controller/ChatSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/example/socialmediaserver/controller/MessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/example/serviceregistrationanddiscoveryservice/ServiceRegistrationAndDiscoveryServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/com/example/serviceregistrationanddiscoveryservice/ServiceRegistrationAndDiscoveryServiceApplication.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/LogServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/LogServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/controller/PersonalLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/controller/PersonalLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/service/PersonalLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/java/com/socialmedia/logservice/service/PersonalLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/log-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/chat/Chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/example/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/example/userservice/SocialMediaWebApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +31,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -80,7 +52,8 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -94,28 +67,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "C:/Users/linus/Documents/GitHub/social_media/social_media/vertx-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "d709240ab4fbb72273a429b38874fcd5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/linus/Documents/GitHub/social_media/social_media/vertx-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d709240ab4fbb72273a429b38874fcd5&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -126,6 +107,9 @@
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\chat-service" />
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\log-service" />
       <recent name="C:\Users\linus\Downloads\SocialMedia_WebApp-Personal_Log\social_media\user-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\linus\Documents\GitHub\social_media\social_media\front-end\src\components\register" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.socialmediaserver.config" />
@@ -146,7 +130,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.chat-app: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.ChatServiceApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -210,19 +197,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.chatdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="chatdb" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.log-app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -264,10 +238,10 @@
     </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yml.chat-app: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.chatdb: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.log-app: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.react-app: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.user-app: Compose Deployment" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ChatServiceApplication" />
@@ -278,11 +252,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Docker.docker-compose.yml.chat-app: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.log-app: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.user-app: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.react-app: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.chatdb: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -312,8 +286,27 @@
       <workItem from="1672784105902" duration="3375000" />
       <workItem from="1672788049178" duration="4915000" />
       <workItem from="1672830424828" duration="3732000" />
-      <workItem from="1672835048914" duration="11333000" />
+      <workItem from="1672835048914" duration="34003000" />
+      <workItem from="1672913284727" duration="12130000" />
+      <workItem from="1672928440560" duration="42459000" />
+      <workItem from="1673091011618" duration="9087000" />
+      <workItem from="1673127843774" duration="14918000" />
     </task>
+    <task id="LOCAL-00001" summary="docker-compose funkar på back-end men inte front-end">
+      <created>1672854061567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672854061568</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chart klar">
+      <created>1673105876127</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673105876127</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,5 +322,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="docker-compose funkar på back-end men inte front-end" />
+    <MESSAGE value="chart klar" />
+    <MESSAGE value="kafka Apache påbörjad" />
+    <MESSAGE value="back-end fixad front-end kvar" />
+    <option name="LAST_COMMIT_MESSAGE" value="back-end fixad front-end kvar" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front-end/src/components/users/User.js</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
