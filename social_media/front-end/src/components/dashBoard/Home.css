@@ -1,0 +1,294 @@
+body {
+    background-color: #282c34;
+}
+
+.App {
+    text-align: center;
+    #max-width: 728px;
+    margin: 0 auto;
+}
+
+.App header {
+    #padding-top: 20%;
+    background-color: #181717;
+    height: 10vh;
+    min-height: 50px;
+    color: white;
+    position: relative;
+    width: 100%;
+    max-width: 728px;
+    top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    box-sizing: border-box;
+}
+
+.App section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(40, 37, 53);
+}
+
+home {
+    display:flex;
+    justify-content:space-between;
+}
+
+box {
+    margin: 10vh 0 10vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+following {
+    border: 4px solid black;
+    margin: 10vh 0 10vh;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+main::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+add {
+    #height: 10vh;
+    #max-width: 728px;
+
+    background: none;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    border: 4px solid black;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+add input[typeof="add"] {
+    background: none;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 1px;
+    margin-right: 15px;
+    text-align: left;
+    border: 2px solid black;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+add input[typeof="add"]:hover {
+    transition: 0.5s;
+    background: #64bcc0;
+}
+
+.add_button{
+    background: none;
+    display: block;
+    border: 2px solid black;
+    color: white;
+    border-radius: 100px;
+    transition: 0.25s;
+}
+
+.add_button:hover{
+    transition: 0.5s;
+    background: #64bcc0;
+}
+
+image {
+    height: 10vh;
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    background-color: #282c34;
+    margin: auto;
+}
+
+input[type = "file"]{
+    display: none;
+}
+
+image label{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label:hover{
+    transition: 0.5s;
+    background: #40408d;
+}
+
+
+form button {
+    width: 10%;
+    background-color: black;
+}
+
+form button:hover {
+    transition: 0.5s;
+    background: #40408d;
+}
+
+input {
+    #line-height: 1.5;
+    #width: 100%;
+    #font-size: 1.5rem;
+    #background: rgb(169, 27, 27);
+    #color: white;
+    #outline: none;
+    #border: none;
+    #padding: 0 10px;
+}
+
+.sign-in {
+    color: #282c34;
+    background: white;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+ul, li {
+    text-align: left;
+    list-style: none;
+}
+
+p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+
+.sent {
+    flex-direction: row-reverse;
+}
+
+.sent p {
+    color: white;
+    background: #0b93f6;
+    align-self: flex-end;
+}
+.received p {
+    background: #e5e5ea;
+    color: black;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+}
+
+lbox {
+    background-color: #64bcc0;
+    #display: block;
+    #padding-left: 20px;
+    #border: 1px solid black;
+    outline: none;
+    transition: 0.25s;
+    border-radius: 24px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+lbox p {
+    color: white;
+    text-align: left;
+    font-weight: 500;
+}
+
+lbox p[typeof="user"] {
+    color: white;
+    text-align: left;
+    font-weight: 450;
+}
+
+lbox p[typeof="date"] {
+    color: white;
+    text-align: left;
+    font-weight: 450;
+}
+p[typeof="Title"] {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.log_button {
+    background: none;
+    border: 2px solid black;
+    color: white;
+    border-radius: 100px;
+    transition: 0.25s;
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.log_button:hover{
+    transition: 0.5s;
+    background: #618d8d;
+}
+
+.chat_button {
+    background: none;
+    #display: block;
+    border: 2px solid black;
+    color: white;
+    border-radius: 100px;
+    transition: 0.25s;
+}
+
+.chat_button:hover{
+    transition: 0.5s;
+    background: #618d8d;
+}

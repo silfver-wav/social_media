@@ -1,0 +1,60 @@
+home {
+    display: flex;
+    flex-wrap: wrap; /* allows flex items to wrap onto multiple lines */
+    justify-content: space-between; /* distributes flex items evenly along the main axis */
+    align-items: flex-start; /* aligns flex items along the cross axis */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* reduced width to allow for two equal-width columns */
+    border: 1px solid #e6ecf0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: white;
+}
+
+add {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #e6ecf0;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+}
+
+button.add_button {
+    width: 30%;
+    padding: 12px;
+    background-color: #1da1f2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.add_button:hover {
+    background-color: #0c8aed;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #14171a;
+}
